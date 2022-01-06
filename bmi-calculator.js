@@ -1,3 +1,4 @@
+//jshint esversion: 7
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -14,9 +15,7 @@ app.post('/', function(req, res) {
     let bmi = (703 * (weight / height ** 2));
 
     res.send('Your BMI is ' + bmi.toFixed(2));
-})
-
-
+});
 
 app.listen(3000, function() {
     console.log('Server started on port 3000');
